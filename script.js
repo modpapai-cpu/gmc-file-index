@@ -1,0 +1,255 @@
+// ===========================
+// GMC FILE INDEX PRO
+// Version : 1.0
+// ===========================
+
+const fileData =[
+  { "no": 1, "name": "UTKARSH BANGLA, ALIPURDUAR" },
+  { "no": 2, "name": "UTKARSH BANGLA (PART FILE), DRDC, ALIPURDUAR" },
+  { "no": 3, "name": "DRDC UTKARSH BANGLA" },
+  { "no": 4, "name": "DRDC UTKARSH BANGLA" },
+  { "no": 5, "name": "DRDC UTKARSH BANGLA" },
+  { "no": 6, "name": "DRDC UTKARSH BANGLA" },
+  { "no": 7, "name": "2ND DRIVE RECRUITMENT, PBSSD UTKARSH BANGLA RECRUITMENT" },
+  { "no": 8, "name": "PBSSD (LETTER/ORDER)" },
+  { "no": 9, "name": "LETTERS FROM/TO OTHER DEPARTMENTS" },
+  { "no": 10, "name": "ALL BILLS & PAYMENTS, ALIPURDUAR" },
+  { "no": 11, "name": "ALL BILL & PAYMENTS, ALIPURDUAR" },
+  { "no": 12, "name": "ALL BILL & PAYMENTS, ALIPURDUAR" },
+  { "no": 13, "name": "PROMOTIONAL ACTIVITIES" },
+  { "no": 14, "name": "TECHNICAL EDUCATION ALIPURDUAR" },
+  { "no": 15, "name": "PROPOSAL" },
+  { "no": 16, "name": "PMKVY, DDUGKY" },
+  { "no": 17, "name": "SALARY FILE, UTKARSH BANGLA" },
+  { "no": 18, "name": "QUOTATION/WORK ORDER" },
+  { "no": 19, "name": "RPL" },
+  { "no": 20, "name": "RPL (2)" },
+  { "no": 21, "name": "DRDC, UTKARSH BANGLA PROPOSAL" },
+  { "no": 22, "name": "LETTERS/APPLICATION FROM TPs/TCs/TRAINEES – GRIEVANCE REDRESSAL & ISSUES" },
+  { "no": 23, "name": "NEW TRAINING CENTRE INTERVIEW & TARGETS, ALIPURDUAR" },
+  { "no": 24, "name": "SRI SUDIPTA DAS, WBCS (EXE.) FILE 2" },
+  { "no": 25, "name": "UTKARSH BANGLA, ALL BILLS & PAYMENTS, ALIPURDUAR" },
+  { "no": 26, "name": "3RD DRIVE RECRUITMENT PART FILE–01" },
+  { "no": 27, "name": "3RD DRIVE RECRUITMENT PART FILE–02" },
+  { "no": 28, "name": "VERIFICATION FILE FOR TRAINING PARTNER PAYMENT" },
+  { "no": 29, "name": "SPECIAL TP APPLICATION FOR DSRI" },
+  { "no": 30, "name": "DSRI TC UTKARSH BANGLA SAMUKTALA FOOD PRODUCTS" },
+  { "no": 31, "name": "KHAGENHATI SRIJAN FPC (DSRI SKILL TRAINING)" },
+  { "no": 32, "name": "MEETING TECHNICAL EDUCATION & TRAINING" },
+  { "no": 33, "name": "LOI PLACEMENT VERIFICATION" },
+  { "no": 34, "name": "DISTRICT SKILL DEVELOPMENT PLAN (DSDP)" },
+  { "no": 35, "name": "E-OFFICE DPMU, UTKARSH BANGLA" },
+  { "no": 36, "name": "VERIFICATION FILE FOR CANDIDATE PAYMENT" },
+  { "no": 37, "name": "B.ED COLLEGE" },
+  { "no": 38, "name": "KARJIGARA FTC" },
+  { "no": 39, "name": "PATLAKHAWA FPC (DSRI TC)" },
+  { "no": 40, "name": "RE SKILLING (DSRI)" },
+  { "no": 41, "name": "MGNF PROGRAMME UNDER MSDE" },
+  { "no": 42, "name": "VERIFICATION FILE FOR TP PAYMENT (OTHER DISTRICT)" },
+  { "no": 43, "name": "PODDARS AGRO FPC (DSRI TC)" },
+  { "no": 44, "name": "CONVERGENCE TRAINING PROGRAMME JOINTLY ORGANISED BY ANANDADHARA & UTKARSH BANGLA (WBSLM)" },
+  { "no": 45, "name": "SKILL DEVELOPMENT PROGRAMME JOINTLY ORGANISED BY PHE & UTKARSH BANGLA" },
+  { "no": 46, "name": "SHRI NILANJAN GHOSH PERSONAL FILE" },
+  { "no": 47, "name": "BAROBISHA FPC (DSRI TC)" },
+  { "no": 48, "name": "TP PAYMENT – 1" },
+  { "no": 49, "name": "BHATIBARI SKILL LTD." },
+  { "no": 50, "name": "TESTA SANKOSH HORTICULTURE FARMERS CO-OPERATIVE SOCIETY" },
+  { "no": 51, "name": "TP PAYMENT CLAIM HARD COPIES" },
+  { "no": 52, "name": "TECH-P REMUNERATION" },
+  { "no": 53, "name": "DSRI TRAINING PROPOSAL & TARGET" },
+  { "no": 54, "name": "SHRI SUDIPTA DAS, Dy. PD, DRDC (PERSONAL FILE)" },
+  { "no": 55, "name": "UTKARSH BANGLA, ALL BILLS & PAYMENTS, ALIPURDUAR" },
+  { "no": 56, "name": "STAFF SERVICE BENEFIT PRAYER (UTKARSH BANGLA)" },
+  { "no": 57, "name": "CHALONTIKA JOINT LIABILITY GROUP (JLG) TRUST" },
+  { "no": 58, "name": "SHINATIPUR YUVA SANGHA" },
+  { "no": 59, "name": "L&T" },
+  { "no": 60, "name": "TP PAYMENT – 2" },
+  { "no": 61, "name": "ONE DISTRICT ONE PRODUCT (ODOP)" },
+  { "no": 62, "name": "SPECIAL TP APPLICATION FOR DSRI – FILE 2" },
+  { "no": 63, "name": "REQUISITION OF FUND FOR TP PAYMENT" },
+  { "no": 64, "name": "ACCREDITED TRAINING PARTNER" },
+  { "no": 65, "name": "PBSSD (LETTER/ORDER) – FILE 2" },
+  { "no": 66, "name": "PLACEMENT VERIFICATION – FILE 2" },
+  { "no": 67, "name": "TP PAYMENT – FILE 3" },
+  { "no": 68, "name": "NEW TC LOI OF ACCREDITED TP" },
+  { "no": 69, "name": "RPL – 3" },
+  { "no": 70, "name": "SPECIAL TP APPLICATION FOR DSRI – FILE 3" },
+  { "no": 71, "name": "OBSERVANCE OF MSME" },
+  { "no": 72, "name": "MOBILIZATION AND REGISTRATION CAMP" },
+  { "no": 73, "name": "UB OFFICE VEHICLE" },
+  { "no": 74, "name": "PLACEMENT VERIFICATION – FILE 3" },
+  { "no": 75, "name": "REQUISITION FOR STATIONARY ITEMS" },
+  { "no": 76, "name": "LETTER/ORDER – FILE 3" },
+  { "no": 77, "name": "PLACEMENT & LOI VERIFICATION – FILE 4" },
+  { "no": 78, "name": "CHARGE HAND OVER" },
+  { "no": 79, "name": "ALL BILLS & PAYMENTS – 3" },
+  { "no": 80, "name": "ALL BILLS & PAYMENTS – 2(A)" },
+  { "no": 81, "name": "RPL (DSRI)" },
+  { "no": 82, "name": "" },
+  { "no": 83, "name": "4TH RECRUITMENT DRIVE" },
+  { "no": 84, "name": "E-OFFICE DRAFT" },
+  { "no": 85, "name": "SANKALP ACTIVITIES" },
+  { "no": 86, "name": "NBDD FILE" },
+  { "no": 87, "name": "RPL (4)" },
+  { "no": 88, "name": "ALL TP DOCUMENTS" },
+  { "no": 89, "name": "MEETING FILE" },
+  { "no": 90, "name": "IMPORTANT DOC OF OFFICE" },
+  { "no": 91, "name": "" },
+  { "no": 92, "name": "REQUISITION FOR STATIONARY ITEM (2)" },
+  { "no": 93, "name": "UTILIZATION CERTIFICATE AND REQUIREMENT OF FUND (CONVERGENCY)" },
+  { "no": 94, "name": "RPL 5" }
+];
+
+const searchInput = document.getElementById("searchInput");
+
+const fileNo = document.getElementById("fileNo");
+
+const fileName = document.getElementById("fileName");
+
+const resultList = document.getElementById("resultList");
+
+const clearBtn = document.getElementById("clearBtn");
+
+searchInput.addEventListener("input", searchFiles);
+
+clearBtn.addEventListener("click", clearSearch);
+
+// =========================
+
+function searchFiles(){
+
+    const keyword = searchInput.value
+        .trim()
+        .toLowerCase();
+
+    if(keyword===""){
+
+        fileNo.textContent="-";
+
+        fileName.textContent="Search a file...";
+
+        resultList.innerHTML="<p class='empty'>Start typing to search...</p>";
+
+        return;
+
+    }
+
+    let matches = fileData.filter(file=>{
+
+        return file.name.toLowerCase().includes(keyword)
+
+        ||
+
+        file.no.toString().includes(keyword);
+
+    });
+
+    displayResults(matches);
+
+}
+
+// =========================
+
+function displayResults(matches){
+
+    resultList.innerHTML="";
+
+    if(matches.length===0){
+
+        fileNo.textContent="-";
+
+        fileName.textContent="Not Found";
+
+        resultList.innerHTML="<p class='empty'>No matching file found.</p>";
+
+        return;
+
+    }
+
+    // First Match
+
+    fileNo.textContent=matches[0].no;
+
+    fileName.textContent=matches[0].name;
+
+    // List
+
+    matches.forEach(file=>{
+
+        const div=document.createElement("div");
+
+        div.className="result";
+
+        div.innerHTML=`
+
+            <div>
+
+                <strong>${file.no}</strong>
+
+            </div>
+
+            <div>
+
+                ${file.name}
+
+            </div>
+
+        `;
+
+        div.addEventListener("click",()=>{
+
+            fileNo.textContent=file.no;
+
+            fileName.textContent=file.name;
+
+        });
+
+        resultList.appendChild(div);
+
+    });
+
+}
+
+// =========================
+
+function clearSearch(){
+
+    searchInput.value="";
+
+    fileNo.textContent="-";
+
+    fileName.textContent="Search a file...";
+
+    resultList.innerHTML="<p class='empty'>Start typing to search...</p>";
+
+    searchInput.focus();
+
+}
+
+// =========================
+
+// Ctrl + F
+
+document.addEventListener("keydown",e=>{
+
+    if(e.ctrlKey && e.key==="f"){
+
+        e.preventDefault();
+
+        searchInput.focus();
+
+    }
+
+});
+
+// ESC
+
+document.addEventListener("keydown",e=>{
+
+    if(e.key==="Escape"){
+
+        clearSearch();
+
+    }
+
+});

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMC File Index Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <h1>📁 GMC FILE INDEX PRO</h1>
+
+        <p>Utkarsh Bangla Section, Alipurduar</p>
+
+    </div>
+
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search File Name or File Number...">
+
+        <button id="clearBtn">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <div class="result-card" id="resultCard">
+
+        <div class="result-item">
+
+            <label>File No</label>
+
+            <div id="fileNo">-</div>
+
+        </div>
+
+        <div class="result-item">
+
+            <label>File Name</label>
+
+            <div id="fileName">Search a file...</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="list-card">
+
+        <h3>
+
+            <i class="fa-solid fa-list"></i>
+
+            Matching Files
+
+        </h3>
+
+        <div id="resultList">
+
+            <p class="empty">
+
+                Start typing to search...
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
