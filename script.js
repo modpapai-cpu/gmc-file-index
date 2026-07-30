@@ -3,19 +3,24 @@
 // Version : 1.0
 // ===========================
 
-const DATA_URL = "https://pastebin.com/raw/5V47LyDN";
+const DATA_URL = "data.json";
 
 let fileData = [];
 
 fetch(DATA_URL)
-  .then(response => response.json())
-  .then(data => {
-      fileData = data;
-      console.log(fileData);
-  })
-  .catch(error => {
-      console.error("Database Load Error:", error);
-  });
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Failed to load database");
+        }
+        return response.json();
+    })
+    .then(data => {
+        fileData = data;
+        console.log("Database Loaded:", fileData);
+    })
+    .catch(error => {
+        console.error("Database Load Error:", error);
+    });
 
 
 const searchInput = document.getElementById("searchInput");
