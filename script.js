@@ -11,6 +11,7 @@ fetch(DATA_URL)
   .then(response => response.json())
   .then(data => {
       fileData = data;
+      console.log(fileData);
   })
   .catch(error => {
       console.error("Database Load Error:", error);
