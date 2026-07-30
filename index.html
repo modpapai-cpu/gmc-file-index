@@ -1,95 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>File Index</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <div class="header">
+        <!-- HEADER -->
 
-        <h1>📁 FILE INDEX</h1>
+        <header class="header">
 
-        <p>Utkarsh Bangla Section, Alipurduar</p>
+            <div class="logo">
+
+                <i class="fa-solid fa-folder-tree"></i>
+
+            </div>
+
+            <h1>FILE INDEX</h1>
+
+            <p>Utkarsh Bangla Section • Alipurduar</p>
+
+        </header>
+
+        <!-- SEARCH -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    autocomplete="off"
+                    placeholder="Search File Name or File Number...">
+
+                <button id="clearBtn" title="Clear">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- RESULT -->
+
+        <section class="result-card" id="resultCard">
+
+            <div class="card-header">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <span>Search Result</span>
+
+            </div>
+
+            <div class="result-grid">
+
+                <div class="result-item">
+
+                    <label>File Number</label>
+
+                    <div id="fileNo">-</div>
+
+                </div>
+
+                <div class="result-item">
+
+                    <label>File Name</label>
+
+                    <div id="fileName">
+
+                        Search a file...
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MATCHING -->
+
+        <section class="list-card">
+
+            <div class="card-header">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                <span>Matching Files</span>
+
+            </div>
+
+            <div id="resultList">
+
+                <div class="empty">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <p>
+
+                        Start typing to search...
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <div>
+
+                File Index v1.0
+
+            </div>
+
+            <div>
+
+                Developed by <strong>GMC</strong>
+
+            </div>
+
+        </footer>
 
     </div>
 
-
-    <div class="search-box">
-
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Search File Name or File Number...">
-
-        <button id="clearBtn">
-
-            <i class="fa-solid fa-xmark"></i>
-
-        </button>
-
-    </div>
-
-
-    <div class="result-card" id="resultCard">
-
-        <div class="result-item">
-
-            <label>File No</label>
-
-            <div id="fileNo">-</div>
-
-        </div>
-
-        <div class="result-item">
-
-            <label>File Name</label>
-
-            <div id="fileName">Search a file...</div>
-
-        </div>
-
-    </div>
-
-
-    <div class="list-card">
-
-        <h3>
-
-            <i class="fa-solid fa-list"></i>
-
-            Matching Files
-
-        </h3>
-
-        <div id="resultList">
-
-            <p class="empty">
-
-                Start typing to search...
-
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
