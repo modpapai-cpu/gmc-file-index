@@ -2,12 +2,10 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>File Index</title>
+    <title>GMC File Index</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -15,143 +13,316 @@
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
 </head>
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <!-- HEADER -->
+    <!-- Header -->
 
-        <header class="header">
+    <header class="header">
 
-            <div class="logo">
+        <div class="logo">
 
-                <i class="fa-solid fa-folder-tree"></i>
+            <i class="fa-solid fa-folder-tree"></i>
 
-            </div>
+        </div>
 
-            <h1>FILE INDEX</h1>
+        <h1>FILE INDEX</h1>
 
-            <p>Utkarsh Bangla Section • Alipurduar</p>
+        <p>Utkarsh Bangla Section • Alipurduar</p>
 
-        </header>
+        <button id="loginBtn" class="admin-btn">
+    <i class="fa-solid fa-user-shield"></i>
+    <span>Admin</span>
+</button>
 
-        <!-- SEARCH -->
+    </header>
 
-        <section class="search-section">
+    <!-- Search -->
 
-            <div class="search-box">
+    <section class="search-section">
 
-                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <div class="search-box">
 
-                <input
-                    type="text"
-                    id="searchInput"
-                    autocomplete="off"
-                    placeholder="Search File Name or File Number...">
+            <i class="fa-solid fa-magnifying-glass"></i>
 
-                <button id="clearBtn" title="Clear">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search File Name or File Number..."
+                autocomplete="off">
 
-                    <i class="fa-solid fa-xmark"></i>
+            <button id="clearBtn">
 
-                </button>
+                <i class="fa-solid fa-xmark"></i>
 
-            </div>
+            </button>
 
-        </section>
+        </div>
 
-        <!-- RESULT -->
+    </section>
 
-        <section class="result-card" id="resultCard">
+    <!-- Result -->
 
-            <div class="card-header">
+    <section class="result-card">
 
-                <i class="fa-solid fa-file-lines"></i>
+        <div class="card-title">
 
-                <span>Search Result</span>
+            <i class="fa-solid fa-file-lines"></i>
 
-            </div>
+            Search Result
 
-            <div class="result-grid">
+        </div>
 
-                <div class="result-item">
-
-                    <label>File Number</label>
-
-                    <div id="fileNo">-</div>
-
-                </div>
-
-                <div class="result-item">
-
-                    <label>File Name</label>
-
-                    <div id="fileName">
-
-                        Search a file...
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- MATCHING -->
-
-        <section class="list-card">
-
-            <div class="card-header">
-
-                <i class="fa-solid fa-list-check"></i>
-
-                <span>Matching Files</span>
-
-            </div>
-
-            <div id="resultList">
-
-                <div class="empty">
-
-                    <i class="fa-solid fa-magnifying-glass"></i>
-
-                    <p>
-
-                        Start typing to search...
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- FOOTER -->
-
-        <footer>
+        <div class="result-grid">
 
             <div>
 
-                File Index v1.0
+                <label>File Number</label>
+
+                <h2 id="fileNo">-</h2>
 
             </div>
 
             <div>
 
-                Developed by <strong>GMC</strong>
+                <label>File Name</label>
+
+                <h3 id="fileName">Search a file...</h3>
 
             </div>
 
-        </footer>
+        </div>
+
+    </section>
+
+    <!-- Matching -->
+
+    <section class="list-card">
+
+        <div class="card-title">
+
+            <i class="fa-solid fa-list"></i>
+
+            Matching Files
+
+        </div>
+
+        <div id="resultList">
+
+            <div class="empty">
+
+                Start typing to search...
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- ========================= -->
+<!-- Login Modal -->
+<!-- ========================= -->
+
+<div class="modal" id="loginModal">
+
+    <div class="modal-box">
+
+        <span class="close" id="closeLogin">&times;</span>
+
+        <h2>Admin Login</h2>
+
+        <input
+            type="email"
+            id="adminEmail"
+            placeholder="Email">
+
+        <input
+            type="password"
+            id="adminPassword"
+            placeholder="Password">
+
+        <button id="adminLoginBtn">
+
+            Login
+
+        </button>
 
     </div>
 
-    <script src="script.js"></script>
+</div>
 
+<!-- ========================= -->
+<!-- Dashboard -->
+<!-- ========================= -->
+
+<div class="modal" id="dashboardModal">
+
+    <div class="modal-box">
+
+        <span class="close" id="closeDashboard">&times;</span>
+
+        <h2>Dashboard</h2>
+<input type="hidden" id="selectedDocId">
+        <button id="addFileBtn">
+
+            ➕
+
+            Add File
+
+        </button>
+
+        <button id="editFileBtn">
+
+            ✏️
+
+            Edit File
+
+        </button>
+
+        <button id="deleteFileBtn">
+            🗑
+
+            Delete File
+
+        </button>
+        <button id="userManagementBtn" style="display:none;">
+
+        👥
+
+        User Management
+
+        </button>
+        <button id="logoutBtn">
+
+            Logout
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- Add/Edit File Modal -->
+<!-- ========================= -->
+
+<div class="modal" id="fileModal">
+
+    <div class="modal-box">
+
+        <span class="close" id="closeFileModal">&times;</span>
+
+        <h2 id="fileModalTitle">Add File</h2>
+
+        <label for="fileNumberInput" class="input-label">
+    File Number
+</label>
+
+<input
+    type="text"
+    id="fileNumberInput"
+    inputmode="numeric"
+    autocomplete="off"
+    maxlength="10"
+    placeholder="Enter File Number">
+
+<label for="fileNameInput" class="input-label">
+    File Name
+</label>
+
+<input
+    type="text"
+    id="fileNameInput"
+    placeholder="Enter File Name">
+
+        <button id="saveFileBtn">
+
+            Save
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- Delete Confirmation -->
+<!-- ========================= -->
+
+<div class="modal" id="deleteModal">
+
+    <div class="modal-box">
+
+        <span class="close" id="closeDeleteModal">&times;</span>
+
+        <h2>Delete File</h2>
+
+        <p style="margin:20px 0;">
+    Are you sure you want to delete this file?
+</p>
+
+<div id="deleteFileInfo" class="delete-file-info">
+    <strong>File No:</strong> <span id="deleteFileNo">-</span><br>
+    <strong>File Name:</strong> <span id="deleteFileName">-</span>
+</div>
+
+        <button
+            id="confirmDeleteBtn"
+            style="background:#dc2626;">
+
+            Delete
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+
+<!-- ========================= -->
+<!-- User Management -->
+<!-- ========================= -->
+
+<div class="modal" id="userManagementModal">
+
+    <div class="modal-box user-management-modal">
+
+        <span class="close" id="closeUserManagement">&times;</span>
+
+        <h2>
+        <i class="fa-solid fa-user-gear"></i>
+        👥 User Management
+        </h2>
+       
+
+        <div class="user-toolbar">
+
+    <button id="createAdminBtn" class="primary-btn">
+
+        <i class="fa-solid fa-user-plus"></i>
+
+        Create Admin
+
+    </button>
+
+</div>
+
+<div id="userList" class="user-list">
+
+</div>
+
+    </div>
+
+</div>
+<div id="toast" class="toast"></div>
+<script type="module" src="js/app.js"></script>
 </body>
 
 </html>
